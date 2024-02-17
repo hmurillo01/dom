@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulario</title>
+</head>
+
+<body>
+
+  <header>
+    Validaciones JS
+  </header>
+
+  <section>
+    <!-- card para los enunciados -->
+    <article>
+      <h1>
+        Reglas de validación
+      </h1>
+      <p>
+        <span>Ficha:</span> se puede ingresar cualquier caracter
+      </p>
+      <p>
+        <span>Nombre:</span>solo se puede ingresar letras
+      </p>
+      <p>
+        <span>Apellidos:</span>solo se puede ingresar letras
+      </p>
+      <p>
+        <span>Correo:</span> solo se puede ingresar un correo valido
+      </p>
+      <p>
+        <span>Teléfono:</span> solo se puede ingresar numeros
+      </p>
+      <p>
+        <span>Genero:</span>solo se puede seleccionar un genero
+      </p>
+      <p>
+        <span>Ciudad:</span> solo se puede seleccionar una ciudad
+      </p>
+      <p>
+        <span>Habilidades:</span> se tiene que seleccionar como minimo 3 habilidades
+      </p>
+    </article>
+
+    <!-- card para el formulario -->
+
+    <article>
+      <form action="" autocomplete="on">
+        <!-- Ficha -->
+        <div>
+          <label for="ficha">Número de ficha</label>
+          <input type="text" id="ficha" name="ficha" required>
+        </div>
+
+        <!-- Nombres -->
+        <div>
+          <label for="nombre">Nombre</label>
+          <input type="text" name="nombre" id="nombre" pattern="[A-Za-z]+" required>
+        </div>
+
+        <!-- Apellidos -->
+        <div>
+          <label for="apellidos">Apellidos</label>
+          <input type="text" name="apellidos" id="apellidos" pattern="[A-Za-z]+" required>
+        </div>
+
+        <!-- correo -->
+        <div>
+          <label for="correos">Correo eléctronico</label>
+          <input type="email" name="correo" id="correo" required>
+        </div>
+
+        <!-- Teléfono -->
+        <div>
+          <label for="telefono">Teléfono</label>
+          <input type="tel" name="telefono" pattern="[0-9]{10}" maxlength="10" id="telefono" required>
+        </div>
+
+        <!-- Genero -->
+        <div>
+          <label>
+            Hombre <input type="radio" name="genero" value="1" required>
+          </label>
+          <label>
+            Mujer <input type="radio" name="genero" value="2">
+          </label>
+          <label>
+            Otro <input type="radio" name="genero" value="3">
+          </label>
+        </div>
+
+        <!-- Ciudad -->
+        <div>
+          <label for="ciudad">Ciudad</label>
+          <select name="ciudad" id="ciudada" required>
+            <option value="">Seleccione</option>
+            <option value="1">Bucaramanga</option>
+            <option value="2">Bogota</option>
+            <option value="3">Barranquilla</option>
+            <option value="4">Cali</option>
+          </select>
+        </div>
+
+        <!-- Habilidades -->
+        <div>
+          <p>Seleccione minimo 3 habilidades</p>
+          <div>
+            <input type="checkbox" id="html" value="html">
+            <label for="html">HTML</label>
+          </div>
+          <div>
+            <input type="checkbox" id="css" value="css">
+            <label for="css">CSS</label>
+          </div>
+          <div>
+            <input type="checkbox" id="javascript" value="javascript">
+            <label for="javascrit">Javascript</label>
+          </div>
+          <div>
+            <input type="checkbox" id="php" value="php">
+            <label for="php">PHP</label>
+          </div>
+          <div>
+            <input type="checkbox" id="java" value="java">
+            <label for="java">Java</label>
+          </div>
+          <div>
+            <input type="checkbox" id="sql" value="sql">
+            <label for="sql">SQL</label>
+          </div>
+          <div>
+            <input type="checkbox" id="uml" value="uml">
+            <label for="uml">UML</label>
+          </div>
+        </div>
+
+        <div>
+          <button type="submit">Validar</button>
+        </div>
+
+      </form>
+    </article>
+  </section>
+
+</body>
+
+</html>
